@@ -1,0 +1,159 @@
+<marker>
+    <video name="12_34_25.avi"/>
+    <frame number="1">
+        <object className="bl_cone" x="527" y="515" width="18" height="18"/>
+    </frame>
+    <frame number="2">
+        <object className="bl_cone" x="525" y="514" width="18" height="18"/>
+    </frame>
+    <frame number="3">
+        <object className="bl_cone" x="524" y="514" width="18" height="18"/>
+    </frame>
+    <frame number="4">
+        <object className="bl_cone" x="522" y="516" width="18" height="18"/>
+    </frame>
+    <frame number="5">
+        <object className="bl_cone" x="520" y="516" width="19" height="19"/>
+    </frame>
+    <frame number="6">
+        <object className="bl_cone" x="517" y="520" width="19" height="19"/>
+    </frame>
+    <frame number="7">
+        <object className="bl_cone" x="514" y="524" width="19" height="19"/>
+    </frame>
+    <frame number="8">
+        <object className="bl_cone" x="512" y="529" width="19" height="19"/>
+    </frame>
+    <frame number="9">
+        <object className="bl_cone" x="509" y="532" width="20" height="20"/>
+    </frame>
+    <frame number="10">
+        <object className="bl_cone" x="506" y="535" width="20" height="20"/>
+    </frame>
+    <frame number="11">
+        <object className="bl_cone" x="502" y="538" width="20" height="20"/>
+    </frame>
+    <frame number="12">
+        <object className="bl_cone" x="499" y="539" width="20" height="20"/>
+    </frame>
+    <frame number="13">
+        <object className="bl_cone" x="495" y="541" width="21" height="21"/>
+    </frame>
+    <frame number="14">
+        <object className="bl_cone" x="492" y="542" width="22" height="22"/>
+    </frame>
+    <frame number="15">
+        <object className="bl_cone" x="488" y="544" width="23" height="23"/>
+    </frame>
+    <frame number="16">
+        <object className="bl_cone" x="484" y="546" width="23" height="23"/>
+    </frame>
+    <frame number="17">
+        <object className="bl_cone" x="480" y="547" width="24" height="24"/>
+    </frame>
+    <frame number="18">
+        <object className="bl_cone" x="477" y="546" width="24" height="24"/>
+    </frame>
+    <frame number="19">
+        <object className="bl_cone" x="472" y="544" width="25" height="25"/>
+    </frame>
+    <frame number="20">
+        <object className="bl_cone" x="468" y="543" width="26" height="26"/>
+    </frame>
+    <frame number="21">
+        <object className="bl_cone" x="463" y="544" width="27" height="27"/>
+    </frame>
+    <frame number="22">
+        <object className="bl_cone" x="459" y="545" width="27" height="27"/>
+    </frame>
+    <frame number="23">
+        <object className="bl_cone" x="454" y="548" width="27" height="27"/>
+    </frame>
+    <frame number="24">
+        <object className="bl_cone" x="448" y="551" width="28" height="28"/>
+    </frame>
+    <frame number="25">
+        <object className="bl_cone" x="443" y="554" width="29" height="29"/>
+    </frame>
+    <frame number="26">
+        <object className="bl_cone" x="437" y="556" width="29" height="29"/>
+    </frame>
+    <frame number="27">
+        <object className="bl_cone" x="431" y="557" width="30" height="30"/>
+    </frame>
+    <frame number="28">
+        <object className="bl_cone" x="424" y="557" width="31" height="31"/>
+    </frame>
+    <frame number="29">
+        <object className="bl_cone" x="417" y="557" width="32" height="32"/>
+    </frame>
+    <frame number="30">
+        <object className="bl_cone" x="410" y="558" width="33" height="33"/>
+    </frame>
+    <frame number="31">
+        <object className="bl_cone" x="403" y="560" width="33" height="33"/>
+    </frame>
+    <frame number="32">
+        <object className="bl_cone" x="395" y="561" width="35" height="35"/>
+    </frame>
+    <frame number="33">
+        <object className="bl_cone" x="387" y="563" width="35" height="35"/>
+    </frame>
+    <frame number="34">
+        <object className="bl_cone" x="377" y="565" width="36" height="36"/>
+    </frame>
+    <frame number="35">
+        <object className="bl_cone" x="367" y="566" width="38" height="38"/>
+    </frame>
+    <frame number="36">
+        <object className="bl_cone" x="357" y="568" width="40" height="40"/>
+    </frame>
+    <frame number="37">
+        <object className="bl_cone" x="347" y="573" width="41" height="41"/>
+    </frame>
+    <frame number="38">
+        <object className="bl_cone" x="336" y="580" width="43" height="43"/>
+    </frame>
+    <frame number="39">
+        <object className="bl_cone" x="325" y="584" width="45" height="45"/>
+    </frame>
+    <frame number="40">
+        <object className="bl_cone" x="312" y="587" width="47" height="47"/>
+    </frame>
+    <frame number="41">
+        <object className="bl_cone" x="299" y="589" width="49" height="49"/>
+    </frame>
+    <frame number="42">
+        <object className="bl_cone" x="285" y="591" width="51" height="51"/>
+    </frame>
+    <frame number="43">
+        <object className="bl_cone" x="271" y="593" width="54" height="54"/>
+    </frame>
+    <frame number="44">
+        <object className="bl_cone" x="254" y="597" width="58" height="58"/>
+    </frame>
+    <frame number="45">
+        <object className="bl_cone" x="237" y="602" width="62" height="62"/>
+    </frame>
+    <frame number="46">
+        <object className="bl_cone" x="218" y="609" width="66" height="66"/>
+    </frame>
+    <frame number="47">
+        <object className="bl_cone" x="198" y="617" width="70" height="70"/>
+    </frame>
+    <frame number="48">
+        <object className="bl_cone" x="175" y="625" width="75" height="75"/>
+    </frame>
+    <frame number="49">
+        <object className="bl_cone" x="152" y="633" width="79" height="79"/>
+    </frame>
+    <frame number="50">
+        <object className="bl_cone" x="125" y="642" width="86" height="86"/>
+    </frame>
+    <frame number="51">
+        <object className="bl_cone" x="96" y="649" width="94" height="94"/>
+    </frame>
+    <frame number="52">
+        <object className="bl_cone" x="66" y="657" width="100" height="100"/>
+    </frame>
+</marker>

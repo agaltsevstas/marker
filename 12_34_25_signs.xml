@@ -1,0 +1,36 @@
+<marker>
+    <video name="12_34_25.avi"/>
+    <frame number="27">
+        <object className="ye_cone" x="565" y="590" width="58" height="58"/>
+    </frame>
+    <frame number="28">
+        <object className="ye_cone" x="560" y="592" width="62" height="62"/>
+    </frame>
+    <frame number="29">
+        <object className="ye_cone" x="554" y="594" width="66" height="66"/>
+    </frame>
+    <frame number="30">
+        <object className="ye_cone" x="548" y="597" width="70" height="70"/>
+    </frame>
+    <frame number="31">
+        <object className="ye_cone" x="542" y="601" width="75" height="75"/>
+    </frame>
+    <frame number="32">
+        <object className="ye_cone" x="536" y="605" width="80" height="80"/>
+    </frame>
+    <frame number="33">
+        <object className="ye_cone" x="528" y="609" width="86" height="86"/>
+    </frame>
+    <frame number="34">
+        <object className="ye_cone" x="519" y="613" width="93" height="93"/>
+    </frame>
+    <frame number="35">
+        <object className="ye_cone" x="510" y="617" width="100" height="100"/>
+    </frame>
+    <frame number="44">
+        <object className="or_cone" x="744" y="398" width="100" height="100"/>
+    </frame>
+    <frame number="52">
+        <object className="or_cone" x="865" y="687" width="100" height="100"/>
+    </frame>
+</marker>
