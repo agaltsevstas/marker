@@ -1,0 +1,3 @@
+./marker --mode=sign --sign_types=sign_types_all.txt  --video=12_34_25.avi
+or 
+./marker --mode=sign --sign_types=../sign_types_all.txt  --video='/home/pc387/Desktop/projects/marker_/12_325.avi'
