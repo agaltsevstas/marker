@@ -65,16 +65,16 @@ cd bin/
 
 ## Пример трекинга объектов
 <p align="center">
-<img src="images/3.png"/></p>
+<img src="images/4.png"/></p>
 
 ## Пример трекинга дорожных знаков
 <p align="center">
-<img src="images/4.png"/></p>
+<img src="images/5.png"/></p>
 
 ## Список объектов в objects.txt
 <p align="center">
-<img src="images/5.png"/></p>
+<img src="images/6.png"/></p>
 
 ## Список дорожных знаков в road_signs.txt
 <p align="center">
-<img src="images/6.png"/></p>
+<img src="images/7.png"/></p>
