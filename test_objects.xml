@@ -1,0 +1,18 @@
+<marker>
+    <video name="test.avi"/>
+    <frame number="1">
+        <object className="car" x="0" y="457" width="93" height="102"/>
+    </frame>
+    <frame number="3">
+        <object className="car" x="45" y="461" width="39" height="57"/>
+    </frame>
+    <frame number="4">
+        <object className="car" x="9" y="459" width="65" height="61"/>
+    </frame>
+    <frame number="5">
+        <object className="car" x="1" y="461" width="65" height="61"/>
+    </frame>
+    <frame number="6">
+        <object className="car" x="0" y="465" width="59" height="63"/>
+    </frame>
+</marker>

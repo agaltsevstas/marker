@@ -14,7 +14,7 @@ int main(int argc, char* argv[])
         "{help h usage ? |      | print this message               }"
         "{video          |      | path to video file               }"
         "{mode           |      | object, road or scene            }"
-        "{object_types   |      | path to txt with object types    }"
+        "{types          |      | path to txt with types           }"
         "{group          |      | signs/objects/passengers         }"
         "{export         |      | export objects/scene             }"
         "{export_txt     |      | export objects with txt files    }"
@@ -61,7 +61,7 @@ int main(int argc, char* argv[])
 
     if(mode == "object")
     {
-        std::string pathToTxt {parser.get<std::string>("object_types")};
+        std::string pathToTxt {parser.get<std::string>("types")};
         std::replace(pathToTxt.begin(), pathToTxt.end(), '\\', '/');
 
         const marker::SignTypes signTypes{marker::loadSignTypes(pathToTxt)};

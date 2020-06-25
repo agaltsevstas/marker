@@ -84,7 +84,7 @@ void marker::SignStorage::write(long frameIndex, const std::vector<marker::Sign>
         else
         {
             tinyxml2::XMLElement * frameElement {xmlDoc.NewElement(frameTag)}; // элемент входного файла
-//            frameElement->SetAttribute("number", it->first);
+            frameElement->SetAttribute("number", it->first);
 
             for(auto line = signs.begin(); line != signs.end(); ++line)
             {

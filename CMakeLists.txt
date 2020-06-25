@@ -1,66 +1,83 @@
-cmake_minimum_required(VERSION 2.8.11)
-
+# Название проекта
 project(marker)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -fopenmp")
+# Проверка CMake
+cmake_minimum_required(VERSION "${MIN_VER_CMAKE}" FATAL_ERROR)
 
+############### Идентификация платформы ################
+set(PLATFORM 0)
+if(${CMAKE_HOST_SYSTEM_PROCESSOR} STREQUAL x86_64)
+  set(PLATFORM 1)
+  add_definitions(-DPLATFORM=1)
+  message("PLATFORM: x86_64")
+  set(COMMON_LIBS_DIR /usr/lib/x86_64-linux-gnu)
+elseif(${CMAKE_HOST_SYSTEM_PROCESSOR} STREQUAL aarch64)
+  set(PLATFORM 2)
+  add_definitions(-DPLATFORM=2)
+  message("PLATFORM: aarch64")
+  set(COMMON_LIBS_DIR /usr/lib/aarch64-linux-gnu)
+else()
+  message("UNKNOWN PLATFORM: " ${CMAKE_HOST_SYSTEM_PROCESSOR})
+  return()
+endif()
+
+# Поиск библиотек OpenCV
+set(OpenCV_FOUND 1)
 find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
 
-find_package(Boost COMPONENTS system filesystem REQUIRED)
+############# Конфигурация CMake ##############
+# Выбор уровня предупреждения
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wno-unknown-pragmas")
 
-find_package(Caffe QUIET)
+############### Конфигурация компилятора ###############
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_AUTOMOC ON)
 
-if(Caffe_INCLUDE_DIRS AND Caffe_LIBRARIES)
-    include_directories(${Caffe_INCLUDE_DIRS})
-    add_definitions(-DDEEPLABV2_FOUND)
-else(Caffe_INCLUDE_DIRS AND Caffe_LIBRARIES)
-    message(WARNING "deeplabv2 not found. road scene marker is disabled")
-endif(Caffe_INCLUDE_DIRS AND Caffe_LIBRARIES)
+################# Выходная конфигурация ################
+# Путь для выходного файла
+if(CMAKE_BUILD_TYPE MATCHES Debug)
+  set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin/)
+else()
+  set(CMAKE_BUILD_TYPE Release)
+  set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin/)
+endif()
 
-include_directories(${OpenCV_INCLUDE_DIRS} ${Boost_INCLUDE_DIRS})
-include_directories(marker_/src marker_qt/include marker_qt)
+# Qt et common
+if(${PLATFORM} EQUAL 1)
+  set(COMMON_LIBS_DIR /usr/lib/x86_64-linux-gnu)
+else()
+  set(COMMON_LIBS_DIR /usr/lib/aarch64-linux-gnu)
+endif()
 
-add_executable(marker marker_qt/src/main.cpp
+# Хедеры
+include_directories(${PROJECT_SOURCE_DIR}/include/)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
 
-               marker_qt/src/util.cpp
+# Исходники
+file(GLOB SRC_LIST ${PROJECT_SOURCE_DIR}/src/*.cpp)
+file(GLOB INCLUDE_LIST ${PROJECT_SOURCE_DIR}/include/*.h)
 
-               marker_qt/src/sign_marker.cpp
-               marker_qt/src/sign_storage.cpp
-               marker_qt/src/reverse_player.cpp
-               marker_qt/src/sign.cpp
-               marker_qt/src/sign_exporter.cpp
+################### Определение цели ###################
+# Создание исполняемого приложения
+add_executable(marker ${INCLUDE_LIST} ${SRC_LIST} ${FORMS_LIST})
 
-               marker_qt/src/road_layout_marker.cpp
-               marker_qt/src/forward_player.cpp
-               marker_qt/src/road_layout.cpp
-               marker_qt/src/road_layout_storage.cpp
+################ Подключаемые библиотеки ###############
+# Общие библиотеки
+link_directories(${COMMON_LIBS_DIR})
 
-               marker_qt/src/road_scene_marker.cpp
-               marker_qt/src/segmentation.cpp
-               marker_qt/src/road_scene.cpp
-               marker_qt/src/road_scene_storage.cpp
-               marker_qt/src/scene_export.cpp)
+# OpenCV
+target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})
 
-if(Caffe_INCLUDE_DIRS AND Caffe_LIBRARIES)
-    target_link_libraries(marker ${Caffe_LIBRARIES})
-endif(Caffe_INCLUDE_DIRS AND Caffe_LIBRARIES)
-
-target_link_libraries(marker ${OpenCV_LIBS} ${Boost_LIBRARIES})
-
-option(BUILD_DOC "Build documentation" OFF)
-
-if(BUILD_DOC)
-
-    set(DOXYGEN_SKIP_DOT FALSE)
-    find_package(Doxygen REQUIRED)
-
-    set(DOXYGEN_IN ${CMAKE_CURRENT_SOURCE_DIR}/docs/Doxyfile.in)
-    set(DOXYGEN_OUT ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile)
-
-    configure_file(${DOXYGEN_IN} ${DOXYGEN_OUT} @ONLY)
-
-    add_custom_target(doc_doxygen ALL COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUT}
-        WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
-        COMMENT "Generating API documentation with Doxygen")
-
-endif(BUILD_DOC)
+# Boost
+target_link_libraries(${PROJECT_NAME} libboost_regex.so)
+target_link_libraries(${PROJECT_NAME} libboost_system.so)
+target_link_libraries(${PROJECT_NAME} libboost_filesystem.so)
+target_link_libraries(${PROJECT_NAME} libboost_log.so)	    
+target_link_libraries(${PROJECT_NAME} libboost_log_setup.so)	
+target_link_libraries(${PROJECT_NAME} libboost_thread.so)
+target_link_libraries(${PROJECT_NAME} libpthread.so)         
+target_link_libraries(${PROJECT_NAME} libdl.so)	              
+target_link_libraries(${PROJECT_NAME} libX11.so)	      

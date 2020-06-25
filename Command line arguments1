@@ -1,3 +1,0 @@
---mode=object --object_types=../object_types_all.txt --video='/home/pc387/Desktop/projects/marker_qt_version_2/12_34_25.avi'
-or 
---mode=object --object_types=../object_types_all.txt --video=../12_34_25.avi

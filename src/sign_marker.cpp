@@ -326,12 +326,13 @@ void marker::markSigns(const std::string &video, const marker::SignTypes &signTy
         "\'p\' - previous frame",
         "mouse right click - delete object",
         "\'a\' - add new object",
-        "shift + \'a\' enable/disable autotracking"
+        "shift + \'a\' enable/disable autotracking",
+        "space - forward/pause"
     };
     std::string signName {};
     std::string signNameSaved {};
 
-    const std::string winName {"road object marker"};
+    const std::string winName {"marker"};
     cv::namedWindow(winName, CV_WINDOW_NORMAL);
 
     bool signChanged {};

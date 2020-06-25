@@ -1,1 +1,0 @@
---mode=object --group=objects --object_types=object_types_all.txt --video=/home/sosimba/projects/marker/12_34_25.avi
