@@ -51,26 +51,30 @@ cd bin/
 ./marker --mode=object --group=signs --types=../data/road_signs.txt --video=../test.avi
 ```
 
+## Полный список возможностей marker
+<p align="center">
+<img src="images/1.png"/></p>
+
 ## Пример запуска видео
 <p align="center">
-<img src="images/1.png" align="center"/></p>
+<img src="images/2.png"/></p>
 
 ## Работа с видео
 <p align="center">
-<img src="images/2.png" align="center"/></p>
+<img src="images/3.png"/></p>
 
 ## Пример трекинга объектов
 <p align="center">
-<img src="images/3.png" align="center"/></p>
+<img src="images/3.png"/></p>
 
 ## Пример трекинга дорожных знаков
 <p align="center">
-<img src="images/4.png" align="center"/></p>
+<img src="images/4.png"/></p>
 
 ## Список объектов в objects.txt
 <p align="center">
-<img src="images/5.png" align="center"/></p>
+<img src="images/5.png"/></p>
 
 ## Список дорожных знаков в road_signs.txt
 <p align="center">
-<img src="images/6.png" align="center"/></p>
+<img src="images/6.png"/></p>
